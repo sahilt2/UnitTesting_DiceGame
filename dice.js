@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = class Dice{
-    constructor(upperBound){
+    constructor(upperBound=6){
         if(!Number.isInteger(upperBound)){
             throw new Error('upper bound must be an integer')
         }

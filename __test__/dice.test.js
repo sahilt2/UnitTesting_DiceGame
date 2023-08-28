@@ -31,12 +31,12 @@ describe('Create a dice with upper bounds 2-20',()=>{
 
 describe('Test the exceptions',()=>{
     const testValues = [
-        [0 , `upper bound too small`]
-        [1 , `upper bound too small`]
-        [-1 , `upper bound too small`]
-        [-10 , `upper bound too small`]
-        [21 , `upper bound too big`]
-        ['a' , `upper bound must be an integer`]
+        [0 , `upper bound too small`],
+        [1 , `upper bound too small`],
+        [-1 , `upper bound too small`],
+        [-10 , `upper bound too small`],
+        [21 , `upper bound too big`],
+        ['a' , `upper bound must be an integer`],
         [2.5 , `upper bound must be an integer`]
     ];
 
