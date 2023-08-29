@@ -1,12 +1,18 @@
 # UnitTesting_DiceGame
 
-## 1. Install jest as devDependencies
+## 1. Initialise
 
 ```shell
-> npm install jest --save-dev
+ npm init -y
 ```
 
-### 2. Modify test-script in package.json
+## 2. Install jest as devDependencies
+
+```shell
+ npm install jest --save-dev
+```
+
+### 3. Modify test-script in package.json
 
 ```json
 "scripts": {
@@ -14,18 +20,18 @@
   }
 ```
 
-## 3. Create test folder named ``__tests__`
+## 4. Create test folder named ``__tests__`
 
-## 4. Write tests
+## 5. Write tests
 
-## 5. To run tests
+## 6. To run tests
 
 ```shell
 > npm test
 ```
 
-## 5b. To run only one test file
+## 6b. To run only one test file
 
 ```shell
-> npm test --testFile fileToBeTested.test.js
+ npm test --testFile fileToBeTested.test.js
 ```
