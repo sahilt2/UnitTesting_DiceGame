@@ -6,7 +6,7 @@ const diceA=new Dice();
 
 console.log(diceA.dots);
 console.log(diceA.minimum);
-console.log(diceA.upperbound);
+console.log(diceA.upperBound); //can't access private field => undefined
 console.log(diceA.maximumValue);
 diceA.minimum=-19
 diceA.dotCount=20;

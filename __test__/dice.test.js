@@ -23,9 +23,9 @@ describe('Create a dice with upper bounds 2-20',()=>{
 
     test.each(testValues)('test upper bound %s', upperbound=>{
         const dice = new Dice(upperbound);
-        expect(dice.maximumValue).toBe(upperbound);
-        exxpect(dice.minimumValue).toBe(1);
         expect(dice.dots).toBe(0)
+        expect(dice.minimumValue).toBe(1);
+        expect(dice.maximumValue).toBe(upperbound);
     })
 });
 
