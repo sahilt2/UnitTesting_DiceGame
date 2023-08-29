@@ -2,6 +2,8 @@
 
 module.exports = class Dice{
     #upperBound
+    #minimum
+    #dotCount
     constructor(upperBound=6){
         if(!Number.isInteger(upperBound)){
             throw new Error('upper bound must be an integer')
@@ -13,15 +15,15 @@ module.exports = class Dice{
             throw new Error('upper bound too small')
         }
         this.#upperBound = upperBound;
-        this.dotCount=0;
-        this.minimum=1
+        this.#dotCount=0;
+        this.#minimum=1
 
     }
     get dots(){
-        return this.dotCount;
+        return this.#dotCount;
     }
     get minimumValue(){
-        return this.minimum;
+        return this.#minimum;
     }
     get maximumValue(){
         return this.#upperBound;
@@ -32,7 +34,7 @@ module.exports = class Dice{
     // }
 
     roll(){
-        this.dotCount = Math.floor(Math.random()*this.#upperBound)+1;
+        this.#dotCount = Math.floor(Math.random()*this.#upperBound)+1;
     }
     
     toString(){
@@ -40,6 +42,6 @@ module.exports = class Dice{
         //     return 'Not rolled yet'
         // }
         // return `${this.dotCount}`;
-        return this.dotCount === 0 ? 'Not rolled yet' : `${this.dotCount}`;
+        return this.#dotCount === 0 ? 'Not rolled yet' : `${this.dotCount}`;
     }
 }
