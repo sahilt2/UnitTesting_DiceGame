@@ -95,3 +95,29 @@ describe('Testing toString',()=>{
     });
 
 });
+
+describe('Test the roll version 2', () => {
+    describe('create dice with no upper bound given', () => {
+        const dice=new Dice();
+        const dotCount = [];
+
+        for(let i=0; i<10; i++){
+            test('when rolled', () => {
+                dice.roll();
+                expect(dice.dots).toBeGreaterThanOrEqual(1);
+                expect(dice.dots).toBeLessThanOrEqual(6);
+            });
+            
+        }
+        test('dot distribution ok', () => {
+            for(let i=0; i<10; i++){
+                dice.roll();
+                dotCount.push(dice.dots);
+            }
+            expect(new Set(dotCount).size>1).toBe(true);
+            // expect(new Set(dotCount).size).toBeGreaterThanOrEqual(1);
+        });
+        
+    });    
+    
+});
